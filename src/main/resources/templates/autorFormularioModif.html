@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="/fragments/head :: head"></head>
+       
+    <body>
+        <nav th:replace="/fragments/navbar :: nav"></nav>
+        <div align="center">
+        <h1 class="fuente">Administración de autores</h1>
+        <p class="cursiva">Utiliza este módulo para modificar un autor</p>
+    </div>
+    <form class="cursiva" align="center" th:action="@{/autor/modificar/__${id}__}" method="post">
+        <p th:if="${exito != null}" th:text="${exito}" style="color: green;"></p>
+        <p th:if="${error != null}" th:text="${error}" style="color: red;"></p>
+        <label>Nombre y apellido</label>
+        <br>
+        <input type="text" th:value="${autor.nombre}" name="nombre" id="nombre">
+        <br>
+        <br>
+        <button class="btn btn-primary" type="submit">Cargar</button>
+        <a class="btn btn-primary" th:href="@{/autor/lista}" role="button">Volver</a>
+    </form>
+        <script th:replace="/fragments/jvs :: script"></script>
+    </body>
+</html>

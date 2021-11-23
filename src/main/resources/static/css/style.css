@@ -1,0 +1,26 @@
+body{
+    background-color: lightgreen; 
+}
+.borde{
+    border-color: black;
+    border-width: 10px;
+    border-style: solid;
+}
+.tabla{
+    border-color: black;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.fuente{
+    font-family: cooper-black;
+    font-size: 80px;
+}
+.fuente1{
+    font-family: impact;
+    font-size: 50px;
+}
+.cursiva{
+    font-family: franklin gothic heavy;
+    font-size: 20px;
+}
